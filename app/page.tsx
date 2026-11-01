@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ContactForm from "@/app/components/contact-form";
 
 const coachingPoints = [
@@ -23,7 +24,14 @@ export default function Home() {
     <main>
       <header className="topbar">
         <a className="wordmark" href="#home" aria-label="Coached by Dre home">
-          <span className="wordmark-icon" aria-hidden="true">D</span>
+          <Image
+            className="brand-logo"
+            src="/DreFitLogo.png"
+            alt="Dre Fit"
+            width={713}
+            height={979}
+            priority
+          />
           <span>COACHED <span className="wordmark-muted">BY</span> DRE</span>
         </a>
         <nav className="nav-links" aria-label="Main navigation">
@@ -97,11 +105,17 @@ export default function Home() {
 
       <footer className="footer">
         <a className="wordmark footer-mark" href="#home">
-          <span className="wordmark-icon" aria-hidden="true">D</span>
+          <Image
+            className="brand-logo"
+            src="/DreFitLogo.png"
+            alt="Dre Fit"
+            width={713}
+            height={979}
+          />
           <span>COACHED <span className="wordmark-muted">BY</span> DRE</span>
         </a>
         <p>STRONGER, ONE SESSION AT A TIME.</p>
-        <span>© {new Date().getFullYear()} COACHED BY DRE</span>
+        <span>COACHED BY DRE</span>
       </footer>
     </main>
   );
